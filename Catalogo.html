@@ -1,0 +1,260 @@
+<!--- Catalogo de doces para a loja Brigadeiros_da_mile --->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigadeiros da Mile - Catálogo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #d2b48c 0%, #ddbf94 50%, #e6ccb3 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(139, 69, 19, 0.1), 0 10px 10px -5px rgba(139, 69, 19, 0.04);
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .instagram-btn {
+            background: linear-gradient(135deg, #E4405F 0%, #C13584 50%, #833AB4 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .instagram-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(228, 64, 95, 0.3);
+        }
+    </style>
+</head>
+<body class="h-full gradient-bg font-sans">
+    <div class="min-h-full">
+        <!-- Header -->
+        <header class="text-center py-8 px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Adicione sua logo aqui -->
+                <div class="mb-4">
+                    <img src="https://i.ibb.co/N2Mjc5dN/logo.png" alt="Brigadeiros da Mile" class="mx-auto h-32 md:h-40 lg:h-48 object-contain rounded-2xl shadow-lg" onerror="this.style.display='none'; document.getElementById('fallback-title').style.display='block';">
+                    <h1 id="fallback-title" class="text-4xl md:text-5xl font-bold text-amber-900 mb-2" style="display: none;">🍫 Brigadeiros da Mile</h1>
+                </div>
+                <p class="text-lg text-amber-800 opacity-90">Brigadeiros artesanais feitos com amor</p>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mt-4 rounded-full"></div>
+            </div>
+        </header>
+
+        <!-- Catálogo -->
+        <main class="max-w-6xl mx-auto px-4 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Brigadeiro Tradicional -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                        <div class="text-6xl">🍫</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Brigadeiro Tradicional</h3>
+                        <p class="text-amber-700 text-sm mb-4">O clássico que todos amam! Feito com chocolate nobre e granulado especial.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-amber-800">R$ 3,50</span>
+                            <span class="text-sm text-amber-600">unidade</span>
+                        </div>
+                        <button onclick="fazerPedido('Brigadeiro Tradicional', 'R$ 3,50')" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">
+                            Fazer Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brigadeiro Gourmet -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                        <div class="text-6xl">✨</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Brigadeiro Gourmet</h3>
+                        <p class="text-amber-700 text-sm mb-4">Sabores especiais: Nutella, Oreo, Pistache, Maracujá e muito mais!</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-amber-800">R$ 5,00</span>
+                            <span class="text-sm text-amber-600">unidade</span>
+                        </div>
+                        <button onclick="fazerPedido('Brigadeiro Gourmet', 'R$ 5,00')" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">
+                            Fazer Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caixinha 12 unidades -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                        <div class="text-6xl">📦</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Caixinha 12 unidades</h3>
+                        <p class="text-amber-700 text-sm mb-4">Mix de sabores tradicionais e gourmet em embalagem especial.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-amber-800">R$ 48,00</span>
+                            <span class="text-sm text-amber-600">caixa</span>
+                        </div>
+                        <button onclick="fazerPedido('Caixinha 12 unidades', 'R$ 48,00')" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">
+                            Fazer Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caixinha 24 unidades -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                        <div class="text-6xl">🎁</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Caixinha 24 unidades</h3>
+                        <p class="text-amber-700 text-sm mb-4">Perfeita para presentear! Variedade completa de sabores.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-amber-800">R$ 90,00</span>
+                            <span class="text-sm text-amber-600">caixa</span>
+                        </div>
+                        <button onclick="fazerPedido('Caixinha 24 unidades', 'R$ 90,00')" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">
+                            Fazer Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brigadeiro de Colher -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                        <div class="text-6xl">🥄</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Brigadeiro de Colher</h3>
+                        <p class="text-amber-700 text-sm mb-4">Cremoso e irresistível! Disponível em potes de 200g e 500g.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-amber-800">R$ 15,00</span>
+                            <span class="text-sm text-amber-600">200g</span>
+                        </div>
+                        <button onclick="fazerPedido('Brigadeiro de Colher 200g', 'R$ 15,00')" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">
+                            Fazer Pedido
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Encomendas Especiais -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                        <div class="text-6xl">🎂</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Encomendas Especiais</h3>
+                        <p class="text-amber-700 text-sm mb-4">Bolos de brigadeiro, tortas e doces personalizados para sua festa!</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xl font-bold text-amber-800">Sob consulta</span>
+                        </div>
+                        <button onclick="fazerPedido('Encomenda Especial', 'Sob consulta')" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">
+                            Fazer Pedido
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Informações de Entrega -->
+        <section class="max-w-4xl mx-auto px-4 py-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                <h2 class="text-2xl font-bold text-amber-900 mb-4 text-center">📍 Informações de Entrega</h2>
+                <div class="grid md:grid-cols-2 gap-4 text-amber-800">
+                    <div class="text-center">
+                        <h3 class="font-semibold mb-2">🚚 Entrega Grátis</h3>
+                        <p class="text-sm">Pedidos acima de R$ 50,00 na região central</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-semibold mb-2">⏰ Horário</h3>
+                        <p class="text-sm">Seg a Sáb: 9h às 18h<br>Dom: 14h às 18h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botões Flutuantes -->
+        <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+            <!-- Instagram -->
+            <button onclick="abrirInstagram()" class="instagram-btn text-white p-4 rounded-full shadow-lg flex items-center space-x-2">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span class="hidden md:inline font-semibold">Instagram</span>
+            </button>
+            
+            <!-- WhatsApp -->
+            <button onclick="abrirWhatsApp()" class="whatsapp-btn text-white p-4 rounded-full shadow-lg flex items-center space-x-2">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                </svg>
+                <span class="hidden md:inline font-semibold">Fazer Pedido</span>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center py-6 px-4 text-amber-800">
+            <p class="text-sm opacity-75">Feito com 💝 para adoçar seu dia</p>
+        </footer>
+    </div>
+
+    <script>
+        function abrirWhatsApp() {
+            const url = "https://www.contate.me/559187437226";
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        function fazerPedido(produto, preco) {
+            const mensagem = `Olá! Gostaria de fazer um pedido:
+
+🍫 *${produto}*
+💰 Preço: ${preco}
+
+Aguardo mais informações sobre entrega e pagamento!`;
+            const url = `https://www.contate.me/559187437226?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        function abrirInstagram() {
+            const instagram = "Brigadeiros_da_mile"; 
+            const url = `https://www.instagram.com/brigadeiros.da.mile?igsh=bTM1azN5cTRjc3Jt&utm_source=qr `;
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        // Animação suave ao carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98e9181b0464f617',t:'MTc2MDQ2NjA2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
